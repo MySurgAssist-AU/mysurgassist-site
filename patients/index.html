@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For Patients | MySurgAssist</title>
+<meta name="description" content="A surgical assistant was part of your operation and MySurgAssist bills on their behalf. What the account is, why you received it and how to pay.">
+<link rel="canonical" href="https://www.mysurgassist.com.au/patients/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MySurgAssist">
+<meta property="og:title" content="For Patients | MySurgAssist">
+<meta property="og:description" content="A surgical assistant was part of your operation and MySurgAssist bills on their behalf. What the account is, why you received it and how to pay.">
+<meta property="og:url" content="https://www.mysurgassist.com.au/patients/">
+<meta property="og:image" content="https://www.mysurgassist.com.au/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#08080b">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<style>
+@font-face{font-family:'Bebas Neue';src:url(/fonts/bebas-neue-latin-400-normal.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:Unbounded;src:url(/fonts/unbounded-latin-700-normal.woff2) format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'IBM Plex Mono';src:url(/fonts/ibm-plex-mono-latin-400-normal.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'IBM Plex Mono';src:url(/fonts/ibm-plex-mono-latin-500-normal.woff2) format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Instrument Serif';src:url(/fonts/instrument-serif-latin-400-normal.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Instrument Serif';src:url(/fonts/instrument-serif-latin-400-italic.woff2) format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'Instrument Sans';src:url(/fonts/instrument-sans-latin-400-normal.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Instrument Sans';src:url(/fonts/instrument-sans-latin-500-normal.woff2) format('woff2');font-weight:500;font-display:swap}
+</style>
+<style>
+body{margin:0;font-family:'Instrument Sans',sans-serif;background:#f3eee4}
+a{color:#1a1826;text-decoration:none}
+a:hover{color:#1b4a8f}
+footer{color:#ffffff}footer a{color:rgba(255,255,255,.85)}footer a:hover{color:#5bb8f5}
+
+/* the stage holds the mark for the whole page. it pins at the top and dims as the page scrolls over it */
+.markstage{position:sticky;top:0;width:1440px;height:900px;overflow:hidden;background:linear-gradient(180deg,#0a0b16 0%,#08080b 60%);z-index:0;animation:stageFade linear both;animation-timeline:scroll(root);animation-range:0 900px}
+@keyframes stageFade{0%{opacity:1;filter:saturate(1)}60%{opacity:.35;filter:saturate(.5)}100%{opacity:.14;filter:saturate(.15)}}
+/* the mark, large, cropped hard by the frame. exact pixels, native 3120:3028 proportion. it does not move */
+.markwrap{position:absolute;left:100px;top:-150px;width:1240px;height:1203px}
+.markwrap > *{position:absolute;left:0;top:0;width:1240px;height:1203px}
+.spill{filter:blur(70px);opacity:0;transform:scale(1.06);animation:spillIn 2.4s ease-out 2.4s both}
+.spill img{display:block;width:1240px;height:1203px;filter:saturate(1.15)}
+@keyframes spillIn{from{opacity:0}to{opacity:.5}}
+
+/* entrance: the four coloured diamonds fade up in turn, without their outlines */
+.pieces{animation:piecesOut 1.2s ease-out 3.4s both}
+.piece{position:absolute;left:0;top:0;width:1240px;height:1203px;animation:pieceIn .9s ease-out both}
+.piece img{display:block;width:1240px;height:1203px}
+.p1{clip-path:polygon(0 0,50% 0,50% 50%,0 50%);animation-delay:.1s}
+.p2{clip-path:polygon(50% 0,100% 0,100% 50%,50% 50%);animation-delay:.45s}
+.p3{clip-path:polygon(50% 50%,100% 50%,100% 100%,50% 100%);animation-delay:.8s}
+.p4{clip-path:polygon(0 50%,50% 50%,50% 100%,0 100%);animation-delay:1.15s}
+@keyframes pieceIn{from{opacity:0}to{opacity:1}}
+@keyframes piecesOut{from{opacity:1}to{opacity:0}}
+
+/* the colour wheel: pure colour spinning behind a stencil of the mark. the stencil never moves */
+.wheel{-webkit-mask-image:url(/assets/mark.png);mask-image:url(/assets/mark.png);-webkit-mask-size:1240px 1203px;mask-size:1240px 1203px;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;overflow:hidden;opacity:0;animation:wheelIn 1.2s ease-out 3.4s both}
+.wheel-disc{position:absolute;left:-310px;top:-330px;width:1860px;height:1860px;border-radius:50%;background:conic-gradient(from 0deg,#3b89b8 7deg, #3b81be 22deg, #6d73b6 37deg, #9167ac 52deg, #aa519e 67deg, #983390 82deg, #662a8a 97deg, #552c8a 112deg, #612a8a 127deg, #792e8d 142deg, #97479c 157deg, #af8ac1 172deg, #8b8ec3 187deg, #626cb1 202deg, #5664ac 217deg, #5161ab 232deg, #5668ae 247deg, #93a4ca 262deg, #9bbbd3 277deg, #6b9fc1 292deg, #4890b6 307deg, #2883ad 322deg, #1a79a5 337deg, #2a83ad 352deg,#3b89b8 360deg);filter:blur(36px);animation:wheelSpin 30s linear infinite 3.4s}
+.wheel-core{position:absolute;left:0;top:0;width:1240px;height:1203px;background:radial-gradient(ellipse at 50% 50%,rgba(255,255,255,.7) 0%,rgba(255,255,255,.4) 16%,rgba(255,255,255,.12) 34%,rgba(255,255,255,0) 52%);mix-blend-mode:screen}
+@keyframes wheelIn{from{opacity:0}to{opacity:1}}
+@keyframes wheelSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+
+/* the black lines draw themselves: the outline layer is revealed by a soft diagonal wipe, corner to corner */
+.ink{-webkit-mask-image:linear-gradient(135deg,#000 0%,#000 45%,transparent 65%);mask-image:linear-gradient(135deg,#000 0%,#000 45%,transparent 65%);-webkit-mask-size:300% 300%;mask-size:300% 300%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:0% 0%;mask-position:0% 0%;animation:inkDraw 1.4s cubic-bezier(.5,0,.3,1) 2s both}
+.ink img{display:block;width:1240px;height:1203px}
+@keyframes inkDraw{from{-webkit-mask-position:100% 100%;mask-position:100% 100%}to{-webkit-mask-position:0% 0%;mask-position:0% 0%}}
+
+/* a faint light travelling along the black borders only */
+.edge{overflow:hidden;-webkit-mask-image:url(/assets/outline-mask.png);mask-image:url(/assets/outline-mask.png);-webkit-mask-size:1240px 1203px;mask-size:1240px 1203px;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;opacity:0.14}
+.edge-bar{position:absolute;top:-400px;left:0;width:120px;height:2000px;background:linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(190,215,255,.5) 45%,rgba(255,255,255,.8) 50%,rgba(190,215,255,.5) 55%,rgba(255,255,255,0) 100%);filter:blur(2px);animation:edgeSweep 11s cubic-bezier(.4,0,.6,1) infinite 4s}
+@keyframes edgeSweep{0%{transform:translateX(-300px) rotate(35deg)}60%,100%{transform:translateX(1700px) rotate(35deg)}}
+
+/* type */
+.up{opacity:1;animation:up 1s cubic-bezier(.2,.8,.25,1) both}
+@keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.micro{font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:11.5px;letter-spacing:2.2px;text-transform:uppercase}
+.svc{display:inline-flex;align-items:center;height:22px;box-sizing:border-box;font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2.8px;color:rgba(255,255,255,.92)}
+.svc:hover{color:#5bb8f5}
+.svc-n{font-size:14px;letter-spacing:1px;color:rgba(255,255,255,.45)}
+.rule-l{transform:scaleX(1);transform-origin:left center;animation:ruleIn 1.3s cubic-bezier(.2,.8,.25,1) 3.4s both}
+.rule-r{transform:scaleX(1);transform-origin:right center;animation:ruleIn 1.3s cubic-bezier(.2,.8,.25,1) 3.4s both}
+@keyframes ruleIn{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.panel{box-sizing:border-box;background:#0f1e45;border:1px solid rgba(255,255,255,.12);border-radius:6px;padding:28px;display:flex;flex-direction:column;gap:18px}
+.frag{box-sizing:border-box;background:#0a1636;border:1px solid rgba(255,255,255,.1);border-radius:4px;padding:16px;display:flex;flex-direction:column;gap:12px}
+.chip{display:inline-flex;align-items:center;height:22px;padding:0 9px;border:1px solid rgba(255,255,255,.2);border-radius:3px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.85);white-space:nowrap}
+.row{display:grid;grid-template-columns:96px minmax(0,1fr) 56px 90px;gap:12px;align-items:center;padding:9px 0;border-top:1px solid rgba(255,255,255,.08);font-size:12.5px}
+.roll{display:inline-block;height:1.08em;overflow:hidden;vertical-align:bottom}
+.roll-in{display:flex;flex-direction:column;animation:roll 15s cubic-bezier(.76,0,.24,1) infinite}
+.roll-in span{display:block;height:1.08em;line-height:1.08em}
+@keyframes roll{0%,16%{transform:translateY(0)}20%,36%{transform:translateY(-1.08em)}40%,56%{transform:translateY(-2.16em)}60%,76%{transform:translateY(-3.24em)}80%,96%{transform:translateY(-4.32em)}100%{transform:translateY(-5.4em)}}
+.wire{animation:wireDrift 60s ease-in-out infinite alternate}
+@keyframes wireDrift{from{transform:translate(0,0)}to{transform:translate(-60px,40px)}}
+.phone{box-sizing:border-box;border:1px solid rgba(255,255,255,.22);border-radius:36px;background:#0d0d14;padding:12px;overflow:hidden}
+.phone .screen{width:100%;height:100%;box-sizing:border-box;border-radius:26px;overflow:hidden;background:#141428;display:flex;align-items:flex-start;justify-content:center}
+.phone .screen img{display:block;width:100%;height:auto}
+.aumap circle{opacity:1;transform-origin:center;transform-box:fill-box;animation:dotIn .7s cubic-bezier(.2,.8,.25,1) both}
+@keyframes dotIn{from{opacity:0;transform:scale(.2)}to{opacity:1;transform:scale(1)}}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:50px;min-width:200px;padding:0 30px;box-sizing:border-box;border:1px solid rgba(255,255,255,.5);color:#ffffff;font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:2.4px}
+.btn:hover{border-color:#5bb8f5;color:#5bb8f5}
+
+@media (prefers-reduced-motion: reduce){.piece,.pieces,.wheel,.wheel-disc,.ink,.edge-bar,.up,.spill,.rule-l,.rule-r,.roll-in,.wire,.aumap circle{animation:none !important}.pieces{opacity:1 !important}.wheel{display:none !important}.markstage{animation:none !important}}
+
+/* ===== site chrome ===== */
+html{background:#08080b;-webkit-text-size-adjust:100%}
+body{margin:0;overflow-x:hidden}
+.page{zoom:var(--z,1);margin:0 auto;width:1440px;position:relative}
+header{z-index:20}
+.hlogo{display:block}
+.hright{display:flex;align-items:center;gap:22px}
+.burger{display:none;width:24px;height:18px;padding:0;border:0;background:transparent;cursor:pointer;flex-direction:column;justify-content:space-between;color:inherit}
+.burger span{display:block;height:1px;background:currentColor}
+.nav-about{position:relative;display:flex;align-items:center}
+.nav-about > a{display:inline-flex;align-items:center}
+.nav-about .dd{position:absolute;top:100%;left:-20px;padding-top:16px;display:none;z-index:30}
+.nav-about:hover .dd,.nav-about:focus-within .dd{display:block}
+.dd-in{display:flex;flex-direction:column;gap:14px;min-width:170px;padding:18px 22px;background:#0c0c14;border:1px solid rgba(255,255,255,.14);box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.dd-in a{color:rgba(255,255,255,.86) !important;border:0 !important;padding:0 !important}
+.dd-in a:hover{color:#5bb8f5 !important}
+.menu{position:fixed;inset:0;z-index:100;background:#08080b;color:#fff;overflow:auto}
+.menu[hidden]{display:none}
+.menu-in{min-height:100%;box-sizing:border-box;padding:0 20px 40px;display:flex;flex-direction:column;font-family:'Instrument Sans',sans-serif}
+.menu-top{height:60px;display:flex;align-items:center;justify-content:space-between}
+.menu-close{background:transparent;border:0;color:#fff;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:0;cursor:pointer;border-bottom:1px solid rgba(255,255,255,.5);padding-bottom:2px}
+.menu-links{display:flex;flex-direction:column;border-top:1px solid rgba(255,255,255,.14);margin-top:24px}
+.menu-links a{display:block;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.1);font-family:'Bebas Neue',sans-serif;font-size:34px;letter-spacing:2.4px;color:#fff;text-decoration:none;line-height:1}
+.menu-foot{margin-top:auto;padding-top:32px;display:flex;flex-direction:column;gap:22px}
+.menu-app{display:flex;align-items:center;justify-content:center;height:50px;border:1px solid rgba(255,255,255,.5);color:#fff;font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:2.4px;text-decoration:none}
+.menu-contact{display:flex;flex-direction:column;gap:8px;font-size:14px}
+.menu-contact a{color:rgba(255,255,255,.75);text-decoration:none}
+body.menu-open{overflow:hidden}
+.dd-in{background:#f3eee4;border-color:rgba(26,24,38,.18)}.dd-in a{color:#1a1826 !important}.dd-in a:hover{color:#1a79a5 !important}
+
+@media (max-width: 767px){
+.page{width:390px !important}
+.page > section, .page > footer{width:390px !important;height:auto !important;min-height:0 !important;padding:56px 20px !important;display:flex !important;flex-direction:column !important;gap:22px !important;align-items:stretch !important;justify-content:flex-start !important}
+.page > section > div, .page > footer > div{width:auto !important;max-width:100% !important;min-width:0 !important}
+header{position:absolute !important;left:0 !important;top:0 !important;width:390px !important;height:60px !important;padding:0 20px !important;display:flex !important;align-items:center !important;justify-content:space-between !important;z-index:20}
+header nav.hnav{display:none !important}
+header .hlogo img{height:26px !important}
+.hright{gap:16px}
+.happ{font-size:9.5px !important;letter-spacing:1.6px !important;padding-bottom:2px !important}
+.burger{display:flex}
+section.hero{padding:96px 20px 40px !important;position:relative !important}
+section.hero > div[style*="position: absolute"]{position:static !important;width:auto !important;max-width:100% !important;transform:none !important;text-align:left !important;align-items:flex-start !important;padding:0 !important}
+section.hero > .phone[style*="position: absolute"]{position:static !important;margin:8px auto 0 !important}
+section.hero > div.rail{position:static !important;margin-top:24px}
+section.hero > img[src*="outline-mask"]{left:auto !important;right:-320px !important;top:-160px !important;width:760px !important}
+section.hero > img[src*="mark.png"]{left:auto !important;right:-300px !important;top:-260px !important;width:700px !important}
+section.hero > div[style*="position: absolute"] img[src*="mark.png"]{display:none}
+section:not(.hero) > img[src*="outline-mask"], section:not(.hero) > div[style*="mask-image"]{width:760px !important;left:-380px !important}
+div[style*="grid-template-columns"]{display:flex !important;flex-direction:column !important;gap:12px !important;align-items:stretch !important;justify-content:flex-start !important;width:auto !important;max-width:100% !important;padding-left:0 !important;padding-right:0 !important}
+a[style*="grid-template-columns"]{display:flex !important;flex-direction:column !important;gap:10px !important;align-items:flex-start !important}
+div[style*="repeat(5"]{display:grid !important;grid-template-columns:1fr 1fr !important;gap:20px 16px !important}
+div[style*="grid-template-columns"] > div[style*="justify-self"], div[style*="grid-template-columns"] > div.chip{justify-self:start !important;align-self:flex-start !important}
+[style*="max-width: 5"], [style*="max-width: 6"], [style*="max-width: 7"], [style*="max-width: 8"], [style*="max-width: 9"], [style*="max-width: 10"], [style*="max-width: 11"]{max-width:100% !important}
+[style*="width: 420px"], [style*="width: 440px"], [style*="width: 480px"], [style*="width: 560px"], [style*="width: 620px"], [style*="width: 640px"], [style*="width: 700px"], [style*="width: 720px"], [style*="width: 760px"], [style*="width: 800px"], [style*="width: 1000px"], [style*="width: 1344px"], [style*="width: 300px"], [style*="width: 316px"], [style*="width: 400px"]{width:100% !important}
+h1{font-size:40px !important;line-height:1.05 !important;letter-spacing:-0.3px !important}
+h1[style*="Bebas"]{font-size:56px !important;letter-spacing:2px !important}
+h2{font-size:30px !important;line-height:1.12 !important}
+h2[style*="font-size: 56px"], h2[style*="font-size: 48px"]{font-size:32px !important}
+h2[style*="Unbounded"]{font-size:28px !important}
+[style*="font-size: 72px"]{font-size:40px !important}
+[style*="font-size: 60px"], [style*="font-size: 56px"], [style*="font-size: 54px"]{font-size:38px !important}
+[style*="font-size: 34px"]{font-size:24px !important}
+[style*="font-size: 28px"], [style*="font-size: 26px"]{font-size:22px !important}
+.stepno{font-size:64px !important}
+.gbig{font-size:36px !important}
+p, div[style*="line-height: 1.7"], div[style*="line-height: 1.75"], div[style*="line-height: 1.8"]{font-size:15px !important}
+.micro{white-space:normal !important}
+.phone{width:100% !important;max-width:240px !important;height:auto !important;aspect-ratio:300/640;margin-left:auto !important;margin-right:auto !important}
+.phone[style*="border-bottom: 0"]{aspect-ratio:220/240 !important;max-width:220px !important}
+.panel, .frag, .gbox{width:auto !important;max-width:100% !important}
+.side, .side.r{border-left:1px solid rgba(255,255,255,.22) !important;border-right:0 !important;text-align:left !important;padding:14px 18px !important}
+.arrow{height:56px !important}
+svg.aumap{width:350px !important;height:326px !important;align-self:center}
+img[style*="width: 100%"]{max-width:100%}
+blockquote{padding:22px 0 !important;border-right:0 !important;border-left:0 !important;border-top:1px solid rgba(255,255,255,.14)}
+.btn{width:100%;height:46px !important;min-width:0 !important}
+div[style*="display: flex"][style*="gap: 14px"] > .btn{width:auto;flex:1}
+.mrowflow{display:flex;gap:12px;overflow:hidden;width:100%}
+[style*="grid-template-columns: repeat(2, 560px)"]{display:flex !important;flex-direction:column !important}
+[style*="grid-template-columns: repeat(3, 400px)"]{display:flex !important;flex-direction:column !important;border-top:0 !important;border-bottom:0 !important}
+[style*="grid-template-columns: repeat(3, 400px)"] > div{border-right:0 !important;border-top:1px solid rgba(255,255,255,.25) !important;padding:20px 0 !important}
+div[style*="flex: 0 0"]{flex:0 0 220px !important;height:150px !important}
+div[style*="width: 1600px"]{width:1200px !important;margin-left:-20px !important}
+section.hero > div[style*="mask-image"]{display:none !important}
+section.hero .phone{width:240px !important;max-width:240px !important;height:auto !important;aspect-ratio:300/640;margin:16px auto 0 !important}
+.rail{flex-direction:column !important;gap:8px !important;align-items:flex-start !important}
+div[style*="display: flex; justify-content: center; gap"]{flex-direction:column !important;align-items:stretch !important;gap:12px !important}
+div[style*="display: flex"]:has(> .btn){flex-direction:column !important;align-items:stretch !important;gap:10px !important}
+div[style*="display: flex"]:has(> .btn) > .btn{width:100% !important}
+div[style*="display: flex"]:has(> .btn) > .micro{text-align:left}
+div[style*="grid-template-columns: 320px 560px 320px"] > div:empty{display:none}
+.ledger{margin-top:0 !important}
+}
+@media (max-width: 767px){section.hero > img[src*="outline-mask"]{display:none}footer .burger span{background:#fff}}
+</style>
+</head>
+<body>
+
+
+<div class="page" style="width: 1440px; box-sizing: border-box; position: relative; display: flex; flex-direction: column; background: #f3eee4; color: #1a1826;">
+
+<!-- 01 HERO. Plain language. No phone frame; the reader is not an app user -->
+<section class="hero" style="width: 1440px; min-height: 640px; box-sizing: border-box; position: relative; flex-shrink: 0; background: linear-gradient(180deg, #ebe4d6 0%, #f3eee4 70%); overflow: hidden;">
+<img src="/assets/mark.png" alt="" style="position: absolute; left: 760px; top: -380px; width: 1400px; height: auto; opacity: 0.22; filter: blur(90px) saturate(1.1); pointer-events: none;">
+<div style="position: absolute; left: 820px; top: -260px; width: 1300px; height: 1262px; opacity: 0.16; pointer-events: none; background: linear-gradient(135deg, #1a79a5 0%, #3b81be 30%, #6d73b6 55%, #983390 80%, #662a8a 100%); -webkit-mask-image: url(/assets/outline-mask.png); mask-image: url(/assets/outline-mask.png); -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;"></div>
+<header style="position: absolute; left: 0; top: 0; width: 1440px; height: 72px; box-sizing: border-box; padding: 0 48px; display: flex; align-items: center; justify-content: space-between;"><a href="/" class="hlogo" aria-label="MySurgAssist home"><img src="/assets/lockup.png" alt="MySurgAssist" style="height: 30px; width: auto; display: block;"></a><nav class="micro hnav" style="display: flex; align-items: center; gap: 30px; color: rgba(26,24,38,0.72);"><a href="/assistants/" style="color: rgba(26,24,38,0.72);">Assistants</a><a href="/surgeons/" style="color: rgba(26,24,38,0.72);">Surgeons</a><a href="/patients/" style="color: #1a1826; padding-bottom: 3px; border-bottom: 1px solid rgba(26,24,38,0.22);">Patients</a><a href="/resources/" style="color: rgba(26,24,38,0.72);">Resources</a><div class="nav-about"><a href="/team/" style="color: rgba(26,24,38,0.72);" aria-haspopup="true">About<svg width="9" height="6" viewBox="0 0 9 6" fill="none" style="margin-left:6px"><path d="M1 1l3.5 3.5L8 1" stroke="currentColor" stroke-width="1.2"/></svg></a><div class="dd"><div class="dd-in"><a href="/team/">Our Team</a><a href="/network/">Network</a></div></div></div></nav><div class="hright"><a href="/#app" class="micro happ" style="color: #1a1826; padding-bottom: 3px; border-bottom: 1px solid rgba(26,24,38,0.22);">Get The App</a><button class="burger" type="button" aria-label="Open menu" aria-controls="menu" aria-expanded="false" style="color: #1a1826;"><span></span><span></span><span></span></button></div></header>
+<div style="position: absolute; left: 48px; top: 200px; width: 760px; display: flex; flex-direction: column; gap: 24px;">
+<div class="micro" style="color: #1a79a5;">[ For Patients ]</div>
+<h1 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 72px; line-height: 1.02; letter-spacing: -0.6px; color: #1a1826;">A surgical assistant was <em style="font-style: italic; color: #662a8a;">part of your operation.</em></h1>
+<p style="margin: 6px 0 0 0; max-width: 620px; font-size: 16.5px; line-height: 1.75; color: rgba(26,24,38,0.72);">If you have had surgery and an assistant from MySurgAssist was in the theatre, this page explains who they are, why there is a separate account, and what to do with it.</p>
+</div>
+</section>
+
+<!-- 02 WHAT A SURGICAL ASSISTANT IS -->
+<section style="width: 1440px; min-height: 520px; box-sizing: border-box; flex-shrink: 0; padding: 96px 48px 0 48px; background: #f3eee4; display: grid; grid-template-columns: 420px minmax(0, 1fr); gap: 120px; align-items: start;">
+<div style="display: flex; flex-direction: column; gap: 18px;"><div class="micro" style="color: #1a79a5;">[ What A Surgical Assistant Is ]</div><h2 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 42px; line-height: 1.12; letter-spacing: -0.3px; color: #1a1826;">A second pair of <em style="font-style: italic; color: #662a8a;">trained hands.</em></h2></div>
+<div style="display: flex; flex-direction: column; gap: 22px; max-width: 620px; padding-top: 10px;">
+<p style="margin: 0; font-size: 16px; line-height: 1.8; color: rgba(26,24,38,0.72);">Most operations need more than one doctor at the table. The surgical assistant is a medical practitioner, or a specially trained nurse, who works alongside your surgeon during the procedure: holding, retracting, suturing and helping the operation run safely and smoothly. Your surgeon chooses to have one because it makes for a better, safer operation.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.8; color: rgba(26,24,38,0.72);">The assistant is a separate practitioner from your surgeon, which is why their fee is a separate account. That arrangement will have been set out in your informed financial consent with your surgeon&rsquo;s rooms. MySurgAssist is the company that provides the assistant and handles that account.</p>
+</div>
+</section>
+
+<!-- 03 WHAT YOU WILL PAY. Navy. The modes, in terms of the patient's pocket -->
+<section style="width: 1440px; min-height: 900px; box-sizing: border-box; flex-shrink: 0; padding: 96px 48px; background: #ebe4d6; position: relative; display: grid; grid-template-columns: 420px minmax(0, 1fr); gap: 120px; align-items: start; overflow: hidden;">
+<div style="position: absolute; left: -700px; top: 100px; width: 1500px; height: 1456px; opacity: 0.13; pointer-events: none; background: linear-gradient(135deg, #1a79a5 0%, #3b81be 30%, #6d73b6 55%, #983390 80%, #662a8a 100%); -webkit-mask-image: url(/assets/outline-mask.png); mask-image: url(/assets/outline-mask.png); -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;"></div>
+<div style="position: relative;"><div style="display: flex; flex-direction: column; gap: 18px;"><div class="micro" style="color: #1a79a5;">[ What You Will Pay ]</div><h2 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 42px; line-height: 1.12; letter-spacing: -0.3px; color: #1a1826;">It depends on <em style="font-style: italic; color: #662a8a;">how your surgeon bills.</em></h2><p style="margin: 8px 0 0 0; font-size: 15px; line-height: 1.7; color: rgba(26,24,38,0.72);">Your surgeon&rsquo;s rooms decide how the assistant is billed, and it is usually the same arrangement as the surgeon&rsquo;s own fee. These are the common ones.</p></div></div>
+<div style="position: relative; display: flex; flex-direction: column; border-top: 1px solid rgba(26,24,38,0.22);">
+<div style="display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 32px; padding: 22px 0; border-bottom: 1px solid rgba(26,24,38,0.14);"><div class="micro" style="color: #1a79a5; padding-top: 3px;">[ No Gap ]</div><div style="font-size: 15.5px; line-height: 1.75; color: #1a1826;">Your health fund and Medicare cover the assistant&rsquo;s fee in full. You pay nothing out of pocket for the assistant.</div></div>
+<div style="display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 32px; padding: 22px 0; border-bottom: 1px solid rgba(26,24,38,0.14);"><div class="micro" style="color: #1a79a5; padding-top: 3px;">[ Known Gap ]</div><div style="font-size: 15.5px; line-height: 1.75; color: #1a1826;">Your health fund and Medicare cover most of the fee, and you pay a set amount out of pocket. You will have been told this amount before your operation.</div></div>
+<div style="display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 32px; padding: 22px 0; border-bottom: 1px solid rgba(26,24,38,0.14);"><div class="micro" style="color: #1a79a5; padding-top: 3px;">[ Precollected Fee ]</div><div style="font-size: 15.5px; line-height: 1.75; color: #1a1826;">The assistant&rsquo;s fee was collected by your surgeon&rsquo;s rooms before the operation, usually with the surgeon&rsquo;s own fee. There is nothing further to pay for the assistant.</div></div>
+<div style="display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 32px; padding: 22px 0; border-bottom: 1px solid rgba(26,24,38,0.14);"><div class="micro" style="color: #1a79a5; padding-top: 3px; white-space: nowrap;">[ Uninsured Or Self Funded ]</div><div style="font-size: 15.5px; line-height: 1.75; color: #1a1826;">If you do not have private health insurance, or chose to self fund, the assistant&rsquo;s fee is a private account. Some practices collect it before the operation and some bill it afterwards, so it varies practice to practice. Your informed financial consent will say which.</div></div>
+<div style="display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 32px; padding: 22px 0; border-bottom: 1px solid rgba(26,24,38,0.14);"><div class="micro" style="color: #1a79a5; padding-top: 3px; white-space: nowrap;">[ WorkCover, CTP And Others ]</div><div style="font-size: 15.5px; line-height: 1.75; color: #1a1826;">If your surgery was in relation to an insurance claim with WorkCover, CTP or a similar scheme, the assistant&rsquo;s fee is billed to the scheme and you should not receive an account. Any queries, email us at admin@mysurgassist.com.au.</div></div>
+</div>
+</section>
+
+<!-- 04 THE ACCOUNT. Black. Pay the account on the invoice; never a bank account on the page -->
+<section style="width: 1440px; min-height: 960px; box-sizing: border-box; flex-shrink: 0; padding: 96px 48px; background: #f3eee4; display: grid; grid-template-columns: 420px minmax(0, 1fr); gap: 120px; align-items: start;">
+<div style="display: flex; flex-direction: column; gap: 18px;"><div class="micro" style="color: #1a79a5;">[ Your Account ]</div><h2 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 42px; line-height: 1.12; letter-spacing: -0.3px; color: #1a1826;">Pay the account <em style="font-style: italic; color: #662a8a;">shown on your invoice.</em></h2></div>
+<div style="display: flex; flex-direction: column; gap: 22px; padding-top: 10px;">
+<p style="margin: 0; font-size: 16px; line-height: 1.8; color: rgba(26,24,38,0.72);">If you receive an account for the assistant, the payment details are on the invoice itself. Please use those, and only those. MySurgAssist uses different accounts for different assistants, so details on this website or from a previous invoice may not be right for yours.</p>
+<div style="box-sizing: border-box; padding: 24px 28px; background: #ffffff; border: 1px solid rgba(26,24,38,0.22); border-left: 3px solid #1a79a5; border-radius: 6px; display: flex; flex-direction: column; gap: 10px;">
+<div class="micro" style="color: #1a79a5;">[ A Change From 1 October ]</div>
+<p style="margin: 0; font-size: 16px; line-height: 1.75; color: #1a1826; font-weight: 500;">From 1 October we are no longer able to accept credit or debit card payments.</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.75; color: rgba(26,24,38,0.72);">This follows a change in government rules on card payments, and it applies to every invoice, so please pay by the bank transfer details shown on your invoice. We know a card is easier, and we are sorry for the extra step. If that is difficult for you, email us and we will help.</p>
+</div>
+<div style="display: flex; flex-direction: column; border-top: 1px solid rgba(26,24,38,0.22); margin-top: 8px;">
+<div style="display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 32px; padding: 22px 0; border-bottom: 1px solid rgba(26,24,38,0.14);"><div class="micro" style="color: #1a79a5; padding-top: 3px;">[ Is This Invoice Real ]</div><div style="font-size: 15.5px; line-height: 1.75; color: #1a1826;">MySurgAssist is aware that we live in a time of increased online scams and heightened distrust of online payments. If you have any concerns about the legitimacy of an invoice, contact the rooms of your surgeon directly, or contact us at <a href="mailto:admin@mysurgassist.com.au" style="border-bottom: 1px solid rgba(26,24,38,0.22);">admin@mysurgassist.com.au</a> or <a href="tel:0461551303" style="border-bottom: 1px solid rgba(26,24,38,0.22);">04615 51303</a>.</div></div>
+<div style="display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 32px; padding: 22px 0; border-bottom: 1px solid rgba(26,24,38,0.14);"><div class="micro" style="color: #1a79a5; padding-top: 3px;">[ Health Fund Claims ]</div><div style="font-size: 15.5px; line-height: 1.75; color: #1a1826;">MySurgAssist does not submit claims to Medicare or your health fund on your behalf. If there is a problem with a claim, your first call is always Medicare, your health fund or your surgeon&rsquo;s rooms. The most common cause is that the surgeon&rsquo;s account needs to be submitted alongside the assistant&rsquo;s account.</div></div>
+<div style="display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 32px; padding: 22px 0; border-bottom: 1px solid rgba(26,24,38,0.14);"><div class="micro" style="color: #1a79a5; padding-top: 3px;">[ The Amount ]</div><div style="font-size: 15.5px; line-height: 1.75; color: #1a1826;">If the amount is not what you were told before your operation, contact your surgeon&rsquo;s rooms first. They set the arrangement.</div></div>
+</div>
+</div>
+</section>
+
+<!-- 05 WHO TO CONTACT. Purple. The routing proposal from the spec -->
+<section style="width: 1440px; min-height: 480px; box-sizing: border-box; flex-shrink: 0; padding: 96px 48px; background: linear-gradient(90deg, #ebe4d6 0%, #e7e0e0 60%, #e3dde6 100%); display: grid; grid-template-columns: 420px minmax(0, 1fr); gap: 120px; align-items: start;">
+<div style="display: flex; flex-direction: column; gap: 18px;"><div class="micro" style="color: #1a79a5;">[ Who To Contact ]</div><h2 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 42px; line-height: 1.12; letter-spacing: -0.3px; color: #1a1826;">Unsure? <em style="font-style: italic; color: #662a8a;">Ask your surgeon&rsquo;s rooms.</em></h2><p style="margin: 8px 0 0 0; font-size: 15px; line-height: 1.7; color: rgba(26,24,38,0.72);">Your surgeon&rsquo;s rooms know your operation and the arrangement you agreed to. They are the right first call for almost everything.</p></div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; padding-top: 10px;">
+<div class="panel" style="background: #ffffff; border-color: rgba(26,24,38,0.22); border-top: 3px solid #1a79a5; padding: 28px; gap: 14px;">
+<div class="micro" style="color: #1a79a5;">[ Your Surgeon&rsquo;s Rooms ]</div>
+<div style="font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 1.4px; line-height: 1; color: #0c2149;">For questions about your operation and its costs</div>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.7; color: rgba(26,24,38,0.72);">What was agreed, why there is a gap, what the surgeon&rsquo;s own fee was, and anything about the surgery itself.</p>
+</div>
+<div class="panel" style="background: #ffffff; border-color: rgba(26,24,38,0.22); border-top: 3px solid #662a8a; padding: 28px; gap: 14px;">
+<div class="micro" style="color: #1a79a5;">[ MySurgAssist Billing ]</div>
+<div style="font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 1.4px; line-height: 1; color: #0c2149;">For questions about the assistant&rsquo;s invoice</div>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.7; color: rgba(26,24,38,0.72);">A copy of the invoice, a receipt, or help paying it. Not health fund claims, which we do not submit. <a href="mailto:admin@mysurgassist.com.au" style="color: #1a1826; border-bottom: 1px solid rgba(26,24,38,0.22);">admin@mysurgassist.com.au</a> or <a href="tel:0461551303" style="color: #1a1826; border-bottom: 1px solid rgba(26,24,38,0.22);">04615 51303</a>.</p>
+</div>
+</div>
+</section>
+
+<!-- 06 QUESTIONS -->
+<section style="width: 1440px; min-height: 740px; box-sizing: border-box; flex-shrink: 0; padding: 96px 48px; background: #f3eee4; display: grid; grid-template-columns: 420px minmax(0, 1fr); gap: 120px; align-items: start;">
+<div style="display: flex; flex-direction: column; gap: 18px;"><div class="micro" style="color: #1a79a5;">[ Questions ]</div><h2 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 42px; line-height: 1.12; letter-spacing: -0.3px; color: #1a1826;">The things patients <em style="font-style: italic; color: #662a8a;">ask us.</em></h2></div>
+<div style="display: flex; flex-direction: column; border-top: 1px solid rgba(26,24,38,0.22);">
+<div style="display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 32px; padding: 22px 0; border-bottom: 1px solid rgba(26,24,38,0.14);"><div style="font-size: 15.5px; font-weight: 500; color: #1a1826;">I did not know there would be an assistant.</div><p style="margin: 0; font-size: 15px; line-height: 1.75; color: rgba(26,24,38,0.72);">We do not blame you. The assistant is frequently not well explained in the consent process, and we are sorry about that. Your surgeon decides whether an operation needs an assistant, and the arrangement for their fee is usually set out with the surgeon&rsquo;s own quote. If it was not, your surgeon&rsquo;s rooms can explain it.</p></div>
+<div style="display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 32px; padding: 22px 0; border-bottom: 1px solid rgba(26,24,38,0.14);"><div style="font-size: 15.5px; font-weight: 500; color: #1a1826;">Why is this a separate invoice?</div><p style="margin: 0; font-size: 15px; line-height: 1.75; color: rgba(26,24,38,0.72);">The assistant is a separate practitioner from your surgeon, with their own provider number, so their fee is billed separately. MySurgAssist handles that account on the assistant&rsquo;s behalf.</p></div>
+<div style="display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 32px; padding: 22px 0; border-bottom: 1px solid rgba(26,24,38,0.14);"><div style="font-size: 15.5px; font-weight: 500; color: #1a1826;">Can I speak to the assistant about the account?</div><p style="margin: 0; font-size: 15px; line-height: 1.75; color: rgba(26,24,38,0.72);">No. MySurgAssist is contracted by the assistant to handle their account, so the assistant cannot discuss it with you. Anything about the invoice goes through MySurgAssist billing or your surgeon&rsquo;s rooms.</p></div>
+<div style="display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 32px; padding: 22px 0; border-bottom: 1px solid rgba(26,24,38,0.14);"><div style="font-size: 15.5px; font-weight: 500; color: #1a1826;">I think I have been billed twice.</div><p style="margin: 0; font-size: 15px; line-height: 1.75; color: rgba(26,24,38,0.72);">Contact MySurgAssist billing with both invoices and we will sort it out.</p></div>
+<div style="display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 32px; padding: 22px 0; border-bottom: 1px solid rgba(26,24,38,0.14);"><div style="font-size: 15.5px; font-weight: 500; color: #1a1826;">My health fund rejected the claim.</div><p style="margin: 0; font-size: 15px; line-height: 1.75; color: rgba(26,24,38,0.72);">Contact Medicare, your health fund or your surgeon&rsquo;s rooms first. MySurgAssist does not submit claims on your behalf and cannot resolve a rejected claim. Most often the surgeon&rsquo;s account needs to be submitted in tandem with the assistant&rsquo;s account.</p></div>
+</div>
+</section>
+
+<!-- 06 FOOTER. Noon: trust markers in the footer. Real markers only -->
+<footer style="width: 1440px; min-height: 560px; box-sizing: border-box; flex-shrink: 0; padding: 72px 48px 32px 48px; background: #08080b; border-top: 1px solid rgba(255,255,255,0.12); display: flex; flex-direction: column; justify-content: space-between;">
+
+<div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px;">
+<div style="display: flex; flex-direction: column; gap: 22px;">
+<img src="/assets/lockup.png" alt="MySurgAssist" style="height: 34px; width: auto; align-self: flex-start;">
+<div style="font-size: 13.5px; line-height: 1.8; color: rgba(255,255,255,0.7);">MySurgAssist Pty Ltd<br>8/1 Barr Street, Camperdown NSW<br><a href="mailto:admin@mysurgassist.com.au" style="color: #ffffff;">admin@mysurgassist.com.au</a><br><a href="tel:0461551303" style="color: #ffffff;">04615 51303</a></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px;">
+<div class="micro" style="color: rgba(255,255,255,0.5); padding-bottom: 6px;">[ For ]</div>
+<a href="/assistants/" style="font-size: 14px; font-weight: 500;">Assistants</a>
+<a href="/surgeons/" style="font-size: 14px; font-weight: 500;">Surgeons</a>
+<a href="/patients/" style="font-size: 14px; font-weight: 500;">Patients</a>
+<a href="/resources/" style="font-size: 14px; font-weight: 500;">Resources</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px;">
+<div class="micro" style="color: rgba(255,255,255,0.5); padding-bottom: 6px;">[ Company ]</div>
+<a href="/team/" style="font-size: 14px; font-weight: 500;">Our Team</a>
+<a href="/network/" style="font-size: 14px; font-weight: 500;">Network</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px;">
+<div class="micro" style="color: rgba(255,255,255,0.5); padding-bottom: 6px;">[ Get The App ]</div>
+<a href="https://apps.apple.com/au/app/mysurgassist/id6483004432" style="font-size: 14px; font-weight: 500;">App Store</a>
+<a href="https://play.google.com/store/apps/details?id=com.mysurgassist.app" style="font-size: 14px; font-weight: 500;">Google Play</a>
+<div style="display: flex; gap: 18px; padding-top: 8px;">
+<a href="https://instagram.com/my_surgassist" class="micro" style="font-size: 10.5px; color: rgba(255,255,255,0.7);">Instagram</a>
+<a href="https://linkedin.com/company/mysurgassist" class="micro" style="font-size: 10.5px; color: rgba(255,255,255,0.7);">LinkedIn</a>
+</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 22px;">
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid rgba(255,255,255,0.14); border-bottom: 1px solid rgba(255,255,255,0.14);">
+<div style="box-sizing: border-box; padding: 18px 24px 18px 0; border-right: 1px solid rgba(255,255,255,0.14); display: flex; flex-direction: column; gap: 5px;"><div class="micro" style="font-size: 10px; color: rgba(255,255,255,0.5);">ABN</div><div style="font-size: 13.5px; font-weight: 500;">24 659 633 137</div></div>
+<div style="box-sizing: border-box; padding: 18px 24px; border-right: 1px solid rgba(255,255,255,0.14); display: flex; flex-direction: column; gap: 5px;"><div class="micro" style="font-size: 10px; color: rgba(255,255,255,0.5);">Our Network</div><div style="font-size: 13.5px; font-weight: 500;">About 400 surgical assistants, Australia wide</div></div>
+<div style="box-sizing: border-box; padding: 18px 0 18px 24px; display: flex; flex-direction: column; gap: 5px;"><div class="micro" style="font-size: 10px; color: rgba(255,255,255,0.5);">The App</div><div style="font-size: 13.5px; font-weight: 500;">Recruitment and billing, on iOS and Android</div></div>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.5);">
+<div>&copy; 2026 MySurgAssist Pty Ltd</div>
+<a href="/privacy-policy/" class="micro" style="font-size: 10.5px; color: rgba(255,255,255,0.5);">Privacy Policy</a>
+</div>
+</div>
+
+</footer>
+
+</div>
+
+<div class="menu" id="menu" hidden><div class="menu-in"><div class="menu-top"><a href="/"><img src="/assets/lockup.png" alt="MySurgAssist" style="height: 26px; width: auto; display: block;"></a><button class="menu-close micro" type="button" aria-label="Close menu">Close</button></div><nav class="menu-links"><a href="/">Home</a><a href="/assistants/">Assistants</a><a href="/surgeons/">Surgeons</a><a href="/patients/">Patients</a><a href="/billing/">Billing</a><a href="/resources/">Resources</a><a href="/team/">Our Team</a><a href="/network/">Network</a></nav><div class="menu-foot"><a href="/#app" class="menu-app">GET THE APP</a><div class="menu-contact"><a href="mailto:admin@mysurgassist.com.au">admin@mysurgassist.com.au</a><a href="tel:0461551303">04615 51303</a></div></div></div></div>
+<script>
+(function(){
+  function fit(){var w=document.documentElement.clientWidth||window.innerWidth;var z=w<768?w/390:Math.min(w/1440,1.25);document.documentElement.style.setProperty('--z',z.toFixed(4));}
+  fit();window.addEventListener('resize',fit);window.addEventListener('orientationchange',fit);
+  var menu=document.getElementById('menu');
+  function open(){menu.hidden=false;document.body.classList.add('menu-open');document.querySelectorAll('.burger').forEach(function(b){b.setAttribute('aria-expanded','true')});}
+  function close(){menu.hidden=true;document.body.classList.remove('menu-open');document.querySelectorAll('.burger').forEach(function(b){b.setAttribute('aria-expanded','false')});}
+  document.querySelectorAll('.burger').forEach(function(b){b.addEventListener('click',open)});
+  menu.querySelector('.menu-close').addEventListener('click',close);
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+})();
+</script>
+</body>
+</html>
