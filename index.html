@@ -172,6 +172,18 @@ body.menu-open{overflow:hidden}
 
 @media (prefers-reduced-motion: reduce){.page-mobile .piece, .page-mobile .pieces, .page-mobile .wheel, .page-mobile .wheel-disc, .page-mobile .ink, .page-mobile .edge-bar, .page-mobile .up, .page-mobile .spill, .page-mobile .rule-l, .page-mobile .rule-r, .page-mobile .roll-in, .page-mobile .wire, .page-mobile .aumap circle{animation:none !important}.page-mobile .pieces{opacity:1 !important}.page-mobile .wheel{display:none !important}.page-mobile .markstage{animation:none !important}}.page-mobile .mstage{position:relative;width:390px;height:420px;overflow:hidden;background:linear-gradient(180deg,#0a0b16 0%,#08080b 70%)}.page-mobile .mscale{position:absolute;left:195px;top:230px;width:1240px;height:1203px;transform:translate(-50%,-50%) scale(0.31);transform-origin:center}.page-mobile .mscale .markwrap{left:0;top:0}.page-mobile .mrow{display:grid;grid-template-columns:110px minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.1)}.page-mobile .mq{font-family:'Instrument Serif',serif;font-size:21px;line-height:1.35;color:#fff}
 
+/* phone hero: the two statements take turns, the service words breathe */
+.mstate{position:relative;height:84px;width:100%}
+.mstate span{position:absolute;left:0;right:0;top:0;margin:0;font-family:'Instrument Serif',serif;font-size:25px;line-height:1.22;color:#fff;text-align:center;opacity:0;animation:mstate 11s ease-in-out infinite}
+.mstate span:nth-child(2){animation-delay:5.5s}
+.mstate span em{font-style:italic;color:#c9a6f2}
+@keyframes mstate{0%{opacity:0;transform:translateY(10px)}6%,42%{opacity:1;transform:translateY(0)}50%,100%{opacity:0;transform:translateY(-8px)}}
+.svc{animation:svcPulse 3.6s ease-in-out infinite}
+.svc:nth-of-type(2){animation-delay:1.2s}
+.svc:nth-of-type(3){animation-delay:2.4s}
+@keyframes svcPulse{0%,100%{color:rgba(255,255,255,.72);text-shadow:0 0 0 rgba(91,184,245,0)}50%{color:#fff;text-shadow:0 0 14px rgba(91,184,245,.75)}}
+@media (prefers-reduced-motion: reduce){.mstate span{animation:none;opacity:1;position:static}.mstate{height:auto}.svc{animation:none}}
+
 .page-mobile{display:none !important}
 @media (max-width: 767px){.page-desktop{display:none !important}.page-mobile{display:flex !important}}
 .page-mobile{font-family:'Instrument Sans',sans-serif;background:#08080b;color:#fff}
@@ -236,7 +248,7 @@ body.menu-open{overflow:hidden}
 
 <div class="up" style="position: absolute; left: 48px; bottom: 0; width: 1344px; height: 56px; box-sizing: border-box; border-top: 1px solid rgba(255,255,255,0.16); display: flex; align-items: center; justify-content: space-between; animation-delay: 3.2s;">
 <div class="micro" style="color: rgba(255,255,255,0.5);">[ Run By Surgical Assistants ]</div>
-<div class="micro" style="color: rgba(255,255,255,0.5);">[ Scroll ]</div>
+<div class="micro" style="color: rgba(255,255,255,0.5);">[ Camperdown, NSW ]</div>
 </div>
 
 </section>
@@ -402,21 +414,9 @@ body.menu-open{overflow:hidden}
 <div class="ink"><img src="/assets/mark-outline.png" alt=""></div>
 <div class="edge"><div class="edge-bar"></div></div>
 </div></div></div>
-<div style="position: absolute; left: 20px; right: 20px; top: 440px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px;">
-<h1 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 30px; letter-spacing: 1px; line-height: 1; color: #ffffff;">MYSURGASSIST</h1>
-<div class="micro" style="font-size: 10px; letter-spacing: 1.8px; color: rgba(255,255,255,0.55);">[ Australia&rsquo;s Surgical Assistant Network ]</div>
-</div>
-<div style="position: absolute; left: 20px; right: 20px; top: 528px; display: flex; align-items: center; gap: 12px;">
-<div class="rule-l" style="flex: 1; height: 1px; background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.7) 100%);"></div>
-<div style="display: flex; align-items: center; gap: 10px;"><a href="/assistants/" class="svc" style="font-size: 15px; letter-spacing: 2px;">Recruitment</a><span style="color: rgba(255,255,255,.35);">|</span><a href="/billing/" class="svc" style="font-size: 15px; letter-spacing: 2px;">Billing</a><span style="color: rgba(255,255,255,.35);">|</span><a href="/network/" class="svc" style="font-size: 15px; letter-spacing: 2px;">Networking</a></div>
-<div class="rule-r" style="flex: 1; height: 1px; background: linear-gradient(90deg, rgba(255,255,255,.7) 0%, rgba(255,255,255,0) 100%);"></div>
-</div>
-<div style="position: absolute; left: 20px; right: 20px; top: 580px; display: flex; flex-direction: column; gap: 12px;">
-<a href="/assistants/" style="display: flex; flex-direction: column; gap: 8px; padding: 16px 18px; border: 1px solid rgba(255,255,255,0.35); color: #fff;"><span style="font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 2.4px; line-height: 1;">For Assistants</span><span style="font-size: 13.5px; line-height: 1.5; color: rgba(255,255,255,0.75);">Talented, keen surgical assistants across every specialty.</span></a>
-<a href="/surgeons/" style="display: flex; flex-direction: column; gap: 8px; padding: 16px 18px; border: 1px solid rgba(255,255,255,0.35); color: #fff;"><span style="font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 2.4px; line-height: 1;">For Surgeons</span><span style="font-size: 13.5px; line-height: 1.5; color: rgba(255,255,255,0.75);">Australia&rsquo;s top surgeons and world class operations.</span></a>
-</div>
+<div style="position: absolute; left: 20px; right: 20px; top: 430px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px;"><h1 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 30px; letter-spacing: 1px; line-height: 1; color: #ffffff;">MYSURGASSIST</h1><div class="micro" style="font-size: 10px; letter-spacing: 1.8px; color: rgba(255,255,255,0.55);">[ Australia&rsquo;s Surgical Assistant Network ]</div><div class="mstate" style="margin-top: 14px;"><span>Talented, keen surgical assistants <em>across every specialty.</em></span><span>Australia&rsquo;s top surgeons and <em>world class operations.</em></span></div></div><div style="position: absolute; left: 20px; right: 20px; top: 604px; display: flex; align-items: center; gap: 12px;"><div class="rule-l" style="flex: 1; height: 1px; background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.7) 100%);"></div><div style="display: flex; align-items: center; gap: 10px;"><a href="/assistants/" class="svc" style="font-size: 15px; letter-spacing: 2px;">Recruitment</a><span style="color: rgba(255,255,255,.35);">|</span><a href="/billing/" class="svc" style="font-size: 15px; letter-spacing: 2px;">Billing</a><span style="color: rgba(255,255,255,.35);">|</span><a href="/network/" class="svc" style="font-size: 15px; letter-spacing: 2px;">Networking</a></div><div class="rule-r" style="flex: 1; height: 1px; background: linear-gradient(90deg, rgba(255,255,255,.7) 0%, rgba(255,255,255,0) 100%);"></div></div><div style="position: absolute; left: 20px; right: 20px; top: 656px; display: flex; gap: 12px;"><a href="/assistants/" class="btn" style="flex: 1; height: 50px; min-width: 0; padding: 0;">FOR ASSISTANTS</a><a href="/surgeons/" class="btn" style="flex: 1; height: 50px; min-width: 0; padding: 0;">FOR SURGEONS</a></div>
 <div style="position: absolute; left: 20px; right: 20px; bottom: 28px; display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.12); padding-top: 14px;">
-<div class="micro" style="font-size: 9px; letter-spacing: 1.6px; color: rgba(255,255,255,0.5);">[ Run By Surgical Assistants ]</div><div class="micro" style="font-size: 9px; letter-spacing: 1.6px; color: rgba(255,255,255,0.5);">[ Scroll ]</div>
+<div class="micro" style="font-size: 9px; letter-spacing: 1.6px; color: rgba(255,255,255,0.5);">[ Run By Surgical Assistants ]</div><div class="micro" style="font-size: 9px; letter-spacing: 1.6px; color: rgba(255,255,255,0.5);">[ Camperdown, NSW ]</div>
 </div>
 </section>
 <section class="m-app" style="width: 390px; min-height: 620px; box-sizing: border-box; flex-shrink: 0; padding: 56px 20px; background: #08080b; position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 18px; "><div class="micro" style="font-size: 10px; letter-spacing: 1.8px; color: rgba(255,255,255,0.55);">[ What We Do ]</div><h2 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 34px; line-height: 1.1; letter-spacing: -0.3px; color: #ffffff;">The whole journey of surgical assisting, <em style="font-style: italic;">in one place.</em></h2><p style="margin: 0; font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.78);">Surgical assistants are vital to the world of surgery. From technical skill in the operation to exceptional patient outcomes, they are integral to the economy of surgery as a whole.</p><p style="margin: 0; font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.78);">MySurgAssist links enthusiastic, talented surgical assistants with established consultant surgeons, through a personable, experience driven service that brings both parties together efficiently. We are run by experienced surgical assistants, with second to none knowledge of what assistants and surgeons each need. The aim is a streamlined, hassle free experience that brings both groups together seamlessly.</p></section>
