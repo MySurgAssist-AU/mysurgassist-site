@@ -24,11 +24,11 @@
 @font-face{font-family:'IBM Plex Mono';src:url(/fonts/ibm-plex-mono-latin-500-normal.woff2) format('woff2');font-weight:500;font-display:swap}
 @font-face{font-family:'Instrument Serif';src:url(/fonts/instrument-serif-latin-400-normal.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:'Instrument Serif';src:url(/fonts/instrument-serif-latin-400-italic.woff2) format('woff2');font-weight:400;font-style:italic;font-display:swap}
-@font-face{font-family:'Instrument Sans';src:url(/fonts/instrument-sans-latin-400-normal.woff2) format('woff2');font-weight:400;font-display:swap}
-@font-face{font-family:'Instrument Sans';src:url(/fonts/instrument-sans-latin-500-normal.woff2) format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Plus Jakarta Sans';src:url(/fonts/plus-jakarta-sans-latin-400-normal.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Plus Jakarta Sans';src:url(/fonts/plus-jakarta-sans-latin-500-normal.woff2) format('woff2');font-weight:500;font-display:swap}
 </style>
 <style>
-body{margin:0;font-family:'Instrument Sans',sans-serif;background:#08080b}
+body{margin:0;font-family:'Plus Jakarta Sans',sans-serif;background:#08080b}
 a{color:#ffffff;text-decoration:none}
 a:hover{color:#5bb8f5}
 
@@ -105,7 +105,7 @@ header{z-index:20}
 .dd-in a:hover{color:#5bb8f5 !important}
 .menu{position:fixed;inset:0;z-index:100;background:#08080b;color:#fff;overflow:auto}
 .menu[hidden]{display:none}
-.menu-in{min-height:100%;box-sizing:border-box;padding:0 20px 40px;display:flex;flex-direction:column;font-family:'Instrument Sans',sans-serif}
+.menu-in{min-height:100%;box-sizing:border-box;padding:0 20px 40px;display:flex;flex-direction:column;font-family:'Plus Jakarta Sans',sans-serif}
 .menu-top{height:60px;display:flex;align-items:center;justify-content:space-between}
 .menu-close{background:transparent;border:0;color:#fff;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:0;cursor:pointer;border-bottom:1px solid rgba(255,255,255,.5);padding-bottom:2px}
 .menu-links{display:flex;flex-direction:column;border-top:1px solid rgba(255,255,255,.14);margin-top:24px}
@@ -120,7 +120,7 @@ body.menu-open{overflow:hidden}
 .page{width:390px !important}
 .page > section, .page > footer{width:390px !important;height:auto !important;min-height:0 !important;padding:56px 20px !important;display:flex !important;flex-direction:column !important;gap:22px !important;align-items:stretch !important;justify-content:flex-start !important}
 .page > section > div, .page > footer > div{width:auto !important;max-width:100% !important;min-width:0 !important}
-header{position:absolute !important;left:0 !important;top:0 !important;width:390px !important;height:60px !important;padding:0 20px !important;display:flex !important;align-items:center !important;justify-content:space-between !important;z-index:20}
+section > header{position:absolute !important;left:0 !important;top:0 !important;width:390px !important;height:60px !important;padding:0 20px !important;display:flex !important;align-items:center !important;justify-content:space-between !important;z-index:20}
 header nav.hnav{display:none !important}
 header .hlogo img{height:26px !important}
 .hright{gap:16px}
@@ -161,6 +161,7 @@ p, div[style*="line-height: 1.7"], div[style*="line-height: 1.75"], div[style*="
 svg.aumap{width:350px !important;height:326px !important;align-self:center}
 img[style*="width: 100%"]{max-width:100%}
 blockquote{padding:22px 0 !important;border-right:0 !important;border-left:0 !important;border-top:1px solid rgba(255,255,255,.14)}
+blockquote p{font-size:21px !important;line-height:1.38 !important}
 .btn{width:100%;height:46px !important;min-width:0 !important}
 div[style*="display: flex"][style*="gap: 14px"] > .btn{width:auto;flex:1}
 .mrowflow{display:flex;gap:12px;overflow:hidden;width:100%}
@@ -177,7 +178,7 @@ div[style*="display: flex"]:has(> .btn){flex-direction:column !important;align-i
 div[style*="display: flex"]:has(> .btn) > .btn{width:100% !important}
 div[style*="display: flex"]:has(> .btn) > .micro{text-align:left}
 div[style*="grid-template-columns: 320px 560px 320px"] > div:empty{display:none}
-blockquote header img{width:96px !important;height:96px !important}
+blockquote header{position:static !important;width:auto !important;height:auto !important;padding:0 !important;gap:16px !important}blockquote header img{width:88px !important;height:88px !important}blockquote header > div{min-width:0;flex:1 1 auto}blockquote header > div > div:first-child{font-size:16px !important;overflow-wrap:anywhere}
 .ledger{margin-top:0 !important}
 }
 </style>

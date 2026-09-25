@@ -24,11 +24,11 @@
 @font-face{font-family:'IBM Plex Mono';src:url(/fonts/ibm-plex-mono-latin-500-normal.woff2) format('woff2');font-weight:500;font-display:swap}
 @font-face{font-family:'Instrument Serif';src:url(/fonts/instrument-serif-latin-400-normal.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:'Instrument Serif';src:url(/fonts/instrument-serif-latin-400-italic.woff2) format('woff2');font-weight:400;font-style:italic;font-display:swap}
-@font-face{font-family:'Instrument Sans';src:url(/fonts/instrument-sans-latin-400-normal.woff2) format('woff2');font-weight:400;font-display:swap}
-@font-face{font-family:'Instrument Sans';src:url(/fonts/instrument-sans-latin-500-normal.woff2) format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Plus Jakarta Sans';src:url(/fonts/plus-jakarta-sans-latin-400-normal.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Plus Jakarta Sans';src:url(/fonts/plus-jakarta-sans-latin-500-normal.woff2) format('woff2');font-weight:500;font-display:swap}
 </style>
 <style>
-body{margin:0;font-family:'Instrument Sans',sans-serif;background:#08080b}
+body{margin:0;font-family:'Plus Jakarta Sans',sans-serif;background:#08080b}
 a{color:#ffffff;text-decoration:none}
 a:hover{color:#5bb8f5}
 
@@ -118,7 +118,7 @@ header{z-index:20}
 .dd-in a:hover{color:#5bb8f5 !important}
 .menu{position:fixed;inset:0;z-index:100;background:#08080b;color:#fff;overflow:auto}
 .menu[hidden]{display:none}
-.menu-in{min-height:100%;box-sizing:border-box;padding:0 20px 40px;display:flex;flex-direction:column;font-family:'Instrument Sans',sans-serif}
+.menu-in{min-height:100%;box-sizing:border-box;padding:0 20px 40px;display:flex;flex-direction:column;font-family:'Plus Jakarta Sans',sans-serif}
 .menu-top{height:60px;display:flex;align-items:center;justify-content:space-between}
 .menu-close{background:transparent;border:0;color:#fff;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:0;cursor:pointer;border-bottom:1px solid rgba(255,255,255,.5);padding-bottom:2px}
 .menu-links{display:flex;flex-direction:column;border-top:1px solid rgba(255,255,255,.14);margin-top:24px}
@@ -148,7 +148,7 @@ body.menu-open{overflow:hidden}
 .aumap circle{animation:dotIn .7s cubic-bezier(.2,.8,.25,1) both, auWave 5.5s ease-in-out infinite;animation-delay:calc(var(--d)*1s), calc(1.4s + var(--d)*2.6s)}
 @keyframes auWave{0%,26%,100%{transform:scale(1);filter:brightness(1)}8%{transform:scale(1.9);filter:brightness(1.9)}16%{transform:scale(.85);filter:brightness(.9)}}
 @media (prefers-reduced-motion: reduce){.aumap,.aumap circle{animation:none !important}}
-.page-mobile{margin:0;font-family:'Instrument Sans',sans-serif;background:#08080b}.page-mobile a{color:#ffffff;text-decoration:none}.page-mobile a:hover{color:#5bb8f5}.page-mobile /* the stage holds the mark for the whole page. it pins at the top and dims as the page scrolls over it */
+.page-mobile{margin:0;font-family:'Plus Jakarta Sans',sans-serif;background:#08080b}.page-mobile a{color:#ffffff;text-decoration:none}.page-mobile a:hover{color:#5bb8f5}.page-mobile /* the stage holds the mark for the whole page. it pins at the top and dims as the page scrolls over it */
 .markstage{position:sticky;top:0;width:1440px;height:900px;overflow:hidden;background:linear-gradient(180deg,#0a0b16 0%,#08080b 60%);z-index:0;animation:stageFade linear both;animation-timeline:scroll(root);animation-range:0 900px}
 @keyframes stageFade{0%{opacity:1;filter:saturate(1)}60%{opacity:.35;filter:saturate(.5)}100%{opacity:.14;filter:saturate(.15)}}.page-mobile /* the mark, .page-mobile large, .page-mobile cropped hard by the frame. exact pixels, .page-mobile native 3120:3028 proportion. it does not move */
 .markwrap{position:absolute;left:100px;top:-150px;width:1240px;height:1203px}.page-mobile .markwrap > *{position:absolute;left:0;top:0;width:1240px;height:1203px}.page-mobile .spill{filter:blur(70px);opacity:0;transform:scale(1.06);animation:spillIn 2.4s ease-out 2.4s both}.page-mobile .spill img{display:block;width:1240px;height:1203px;filter:saturate(1.15)}
@@ -186,7 +186,7 @@ body.menu-open{overflow:hidden}
 
 .page-mobile{display:none !important}
 @media (max-width: 767px){.page-desktop{display:none !important}.page-mobile{display:flex !important}}
-.page-mobile{font-family:'Instrument Sans',sans-serif;background:#08080b;color:#fff}
+.page-mobile{font-family:'Plus Jakarta Sans',sans-serif;background:#08080b;color:#fff}
 </style>
 </head>
 <body>
