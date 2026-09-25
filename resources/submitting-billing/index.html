@@ -179,7 +179,7 @@ h2[style*="Unbounded"]{font-size:28px !important}
 .gbig{font-size:36px !important}
 p, div[style*="line-height: 1.7"], div[style*="line-height: 1.75"], div[style*="line-height: 1.8"]{font-size:15px !important}
 .micro{white-space:normal !important}
-.phone{width:100% !important;max-width:240px !important;height:auto !important;aspect-ratio:300/640;margin-left:auto !important;margin-right:auto !important}
+.phone{width:100% !important;max-width:240px !important;height:auto !important;margin-left:auto !important;margin-right:auto !important}
 .phone[style*="border-bottom: 0"]{aspect-ratio:220/240 !important;max-width:220px !important}
 .panel, .frag, .gbox{width:auto !important;max-width:100% !important}
 .side, .side.r{border-left:1px solid rgba(255,255,255,.22) !important;border-right:0 !important;text-align:left !important;padding:14px 18px !important}
@@ -194,10 +194,14 @@ div[style*="display: flex"][style*="gap: 14px"] > .btn{width:auto;flex:1}
 [style*="grid-template-columns: repeat(2, 560px)"]{display:flex !important;flex-direction:column !important}
 [style*="grid-template-columns: repeat(3, 400px)"]{display:flex !important;flex-direction:column !important;border-top:0 !important;border-bottom:0 !important}
 [style*="grid-template-columns: repeat(3, 400px)"] > div{border-right:0 !important;border-top:1px solid rgba(255,255,255,.25) !important;padding:20px 0 !important}
+/* three cell stat rows stack as a ledger on phones: no side borders, no indents */
+div[style*="grid-template-columns: repeat(3, minmax(0, 1fr)); border-top"]{border-top:0 !important;border-bottom:0 !important}
+div[style*="grid-template-columns: repeat(3, minmax(0, 1fr)); border-top"] > div{border-right:0 !important;border-top:1px solid rgba(255,255,255,.14) !important;padding:16px 0 !important;flex-direction:row !important;align-items:center !important;justify-content:space-between !important;gap:16px !important}
+div[style*="grid-template-columns: repeat(3, minmax(0, 1fr)); border-top"] > div:last-child{border-bottom:1px solid rgba(255,255,255,.14) !important}
 div[style*="flex: 0 0"]{flex:0 0 220px !important;height:150px !important}
 div[style*="width: 1600px"]{width:1200px !important;margin-left:-20px !important}
 section.hero > div[style*="mask-image"]{display:none !important}
-section.hero .phone{width:240px !important;max-width:240px !important;height:auto !important;aspect-ratio:300/640;margin:16px auto 0 !important}
+section.hero .phone{width:240px !important;max-width:240px !important;height:auto !important;margin:16px auto 0 !important}
 .rail{flex-direction:column !important;gap:8px !important;align-items:flex-start !important}
 div[style*="display: flex; justify-content: center; gap"]{flex-direction:column !important;align-items:stretch !important;gap:12px !important}
 div[style*="display: flex"]:has(> .btn){flex-direction:column !important;align-items:stretch !important;gap:10px !important}
@@ -206,6 +210,15 @@ div[style*="display: flex"]:has(> .btn) > .micro{text-align:left}
 div[style*="grid-template-columns: 320px 560px 320px"] > div:empty{display:none}
 blockquote header{position:static !important;width:auto !important;height:auto !important;padding:0 !important;gap:16px !important}blockquote header img{width:88px !important;height:88px !important}blockquote header > div{min-width:0;flex:1 1 auto}blockquote header > div > div:first-child{font-size:16px !important;overflow-wrap:anywhere}
 .ledger{margin-top:0 !important}
+/* any multi cell grid row on a phone: no side borders, no left padding, a hairline between cells */
+div[style*="grid-template-columns: repeat("] > div[style*="border-right"]{border-right:0 !important;padding-left:0 !important;padding-right:0 !important;border-top:1px solid rgba(255,255,255,.14) !important;padding-top:18px !important;padding-bottom:18px !important}
+div[style*="grid-template-columns: repeat("] > div[style*="padding: 28px 0 0 28px"], div[style*="grid-template-columns: repeat("] > div[style*="padding: 20px 0 20px 24px"], div[style*="grid-template-columns: repeat("] > div[style*="padding: 18px 0 18px 24px"]{padding-left:0 !important;border-top:1px solid rgba(255,255,255,.14) !important;padding-top:18px !important}
+/* phones wrap their screen on phones: no fixed frame heights, no absolute stages */
+div[style*="position: relative; height: 900px"], div[style*="position: relative; height: 860px"]{height:auto !important;display:flex !important;justify-content:center !important;padding:8px 0 !important}
+div[style*="position: relative; height: 900px"] > .phone, div[style*="position: relative; height: 860px"] > .phone{position:static !important;margin:0 !important}
+.phone{height:auto !important;aspect-ratio:auto !important}
+.phone .screen{height:auto !important}
+div[style*="grid-template-columns: 1fr 1fr; gap: 14px 32px"]{display:grid !important;grid-template-columns:1fr 1fr !important;gap:14px 20px !important}
 }
 </style>
 </head>
