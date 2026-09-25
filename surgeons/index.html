@@ -129,6 +129,16 @@ header{z-index:20}
 .menu-contact a{color:rgba(255,255,255,.75);text-decoration:none}
 body.menu-open{overflow:hidden}
 
+.stat{opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.25,1),transform .9s cubic-bezier(.2,.8,.25,1)}
+.stat.on{opacity:1;transform:none}
+.stat .big{font-family:'Bebas Neue',sans-serif;line-height:.92;color:#fff;white-space:nowrap;letter-spacing:1px;position:relative;display:inline-block}
+.stat .big .sfx{color:#5bb8f5}
+.stat.on .big::after{content:"";position:absolute;left:0;right:0;top:0;bottom:0;background:linear-gradient(110deg,rgba(255,255,255,0) 30%,rgba(255,255,255,.35) 50%,rgba(255,255,255,0) 70%);background-size:250% 100%;mix-blend-mode:overlay;animation:statSheen 1.6s ease-out .9s 1 both;pointer-events:none}
+@keyframes statSheen{from{background-position:120% 0}to{background-position:-120% 0}}
+.stat .rule{height:1px;background:linear-gradient(90deg,rgba(255,255,255,.35),rgba(255,255,255,0));margin:14px 0 12px;transform:scaleX(0);transform-origin:left;transition:transform 1s cubic-bezier(.2,.8,.25,1) .3s}
+.stat.on .rule{transform:scaleX(1)}
+@media (prefers-reduced-motion: reduce){.stat{opacity:1;transform:none}.stat .rule{transform:none}.stat.on .big::after{animation:none}}
+
 @media (max-width: 767px){
 .page{width:390px !important}
 .page > section, .page > footer{width:390px !important;height:auto !important;min-height:0 !important;padding:56px 20px !important;display:flex !important;flex-direction:column !important;gap:22px !important;align-items:stretch !important;justify-content:flex-start !important}
@@ -197,6 +207,8 @@ div[style*="display: flex"]:has(> .btn) > .micro{text-align:left}
 div[style*="grid-template-columns: 320px 560px 320px"] > div:empty{display:none}
 blockquote header{position:static !important;width:auto !important;height:auto !important;padding:0 !important;gap:16px !important}blockquote header img{width:88px !important;height:88px !important}blockquote header > div{min-width:0;flex:1 1 auto}blockquote header > div > div:first-child{font-size:16px !important;overflow-wrap:anywhere}
 .ledger{margin-top:0 !important}
+.stats{display:grid !important;grid-template-columns:1fr 1fr !important;gap:32px 20px !important}
+.stat .big{font-size:60px !important}
 /* any multi cell grid row on a phone: no side borders, no left padding, a hairline between cells */
 div[style*="grid-template-columns: repeat("] > div[style*="border-right"]{border-right:0 !important;padding-left:0 !important;padding-right:0 !important;border-top:1px solid rgba(255,255,255,.14) !important;padding-top:18px !important;padding-bottom:18px !important}
 div[style*="grid-template-columns: repeat("] > div[style*="padding: 28px 0 0 28px"], div[style*="grid-template-columns: repeat("] > div[style*="padding: 20px 0 20px 24px"], div[style*="grid-template-columns: repeat("] > div[style*="padding: 18px 0 18px 24px"]{padding-left:0 !important;border-top:1px solid rgba(255,255,255,.14) !important;padding-top:18px !important}
@@ -232,6 +244,7 @@ div[style*="grid-template-columns: 1fr 1fr; gap: 14px 32px"]{display:grid !impor
 </div>
 </section>
 
+<section style="width: 1440px; box-sizing: border-box; flex-shrink: 0; padding: 0 48px 72px 48px; background: #08080b; position: relative;"><div style="border-top: 1px solid rgba(255,255,255,0.14); padding-top: 40px;"><div class="stats" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 48px;"><div class="stat" style="display: flex; flex-direction: column; min-width: 0; transition-delay: 0.00s;"><div class="big" style="font-size: 72px;"><span class="num" data-n="400">400</span><span class="sfx">+</span></div><div class="rule"></div><div class="micro" style="color: rgba(255,255,255,0.9);">Surgical assistants</div><div style="margin-top: 6px; font-size: 13.5px; line-height: 1.5; color: rgba(255,255,255,0.5);">On the network, Australia wide</div></div><div class="stat" style="display: flex; flex-direction: column; min-width: 0; transition-delay: 0.12s;"><div class="big" style="font-size: 72px;"><span class="num" data-n="100">100</span><span class="sfx"></span></div><div class="rule"></div><div class="micro" style="color: rgba(255,255,255,0.9);">Hospitals</div><div style="margin-top: 6px; font-size: 13.5px; line-height: 1.5; color: rgba(255,255,255,0.5);">Public and private, every state</div></div><div class="stat" style="display: flex; flex-direction: column; min-width: 0; transition-delay: 0.24s;"><div class="big" style="font-size: 72px;"><span class="num" data-n="2,300">2,300</span><span class="sfx">+</span></div><div class="rule"></div><div class="micro" style="color: rgba(255,255,255,0.9);">Lists recruited</div><div style="margin-top: 6px; font-size: 13.5px; line-height: 1.5; color: rgba(255,255,255,0.5);">Posted with us and filled</div></div></div></div></section>
 <!-- 02 WHO YOU GET -->
 <section style="width: 1440px; min-height: 620px; box-sizing: border-box; flex-shrink: 0; padding: 96px 48px 0 48px; background: #08080b; display: grid; grid-template-columns: 420px minmax(0, 1fr); gap: 120px; align-items: start;">
 <div style="display: flex; flex-direction: column; gap: 18px;">
@@ -384,7 +397,7 @@ div[style*="grid-template-columns: 1fr 1fr; gap: 14px 32px"]{display:grid !impor
 <div style="display: flex; flex-direction: column; gap: 22px;">
 <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid rgba(255,255,255,0.14); border-bottom: 1px solid rgba(255,255,255,0.14);">
 <div style="box-sizing: border-box; padding: 18px 24px 18px 0; border-right: 1px solid rgba(255,255,255,0.14); display: flex; flex-direction: column; gap: 5px;"><div class="micro" style="font-size: 10px; color: rgba(255,255,255,0.5);">ABN</div><div style="font-size: 13.5px; font-weight: 500;">24 659 633 137</div></div>
-<div style="box-sizing: border-box; padding: 18px 24px; border-right: 1px solid rgba(255,255,255,0.14); display: flex; flex-direction: column; gap: 5px;"><div class="micro" style="font-size: 10px; color: rgba(255,255,255,0.5);">Our Network</div><div style="font-size: 13.5px; font-weight: 500;">About 400 surgical assistants, Australia wide</div></div>
+<div style="box-sizing: border-box; padding: 18px 24px; border-right: 1px solid rgba(255,255,255,0.14); display: flex; flex-direction: column; gap: 5px;"><div class="micro" style="font-size: 10px; color: rgba(255,255,255,0.5);">Our Network</div><div style="font-size: 13.5px; font-weight: 500;">400+ assistants and 400+ surgeons, Australia wide</div></div>
 <div style="box-sizing: border-box; padding: 18px 0 18px 24px; display: flex; flex-direction: column; gap: 5px;"><div class="micro" style="font-size: 10px; color: rgba(255,255,255,0.5);">The App</div><div style="font-size: 13.5px; font-weight: 500;">Recruitment and billing, on iOS and Android</div></div>
 </div>
 <div style="display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.5);">
@@ -409,6 +422,19 @@ div[style*="grid-template-columns: 1fr 1fr; gap: 14px 32px"]{display:grid !impor
   menu.querySelector('.menu-close').addEventListener('click',close);
   menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+})();
+</script>
+
+<script>
+(function(){
+  var stats=document.querySelectorAll('.stat'); if(!stats.length||!('IntersectionObserver' in window)){stats.forEach(function(s){s.classList.add('on')});return;}
+  function count(el){ var raw=el.getAttribute('data-n'), target=parseInt(raw.replace(/,/g,''),10), year=/^\d{4}$/.test(raw)&&target>1900;
+    var start=year?target-40:0, t0=null, dur=1600;
+    function fmt(v){ return year? String(v) : v.toLocaleString('en-AU'); }
+    function step(ts){ if(!t0) t0=ts; var p=Math.min(1,(ts-t0)/dur); p=1-Math.pow(1-p,3); el.textContent=fmt(Math.round(start+(target-start)*p)); if(p<1) requestAnimationFrame(step); else el.textContent=raw; }
+    requestAnimationFrame(step); }
+  var io=new IntersectionObserver(function(en){ en.forEach(function(e){ if(e.isIntersecting&&!e.target.classList.contains('on')){ e.target.classList.add('on'); var n=e.target.querySelector('.num'); if(n) count(n); } }); },{threshold:0.5});
+  stats.forEach(function(s){ io.observe(s); });
 })();
 </script>
 </body>
