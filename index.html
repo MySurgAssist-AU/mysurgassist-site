@@ -33,7 +33,7 @@ a{color:#ffffff;text-decoration:none}
 a:hover{color:#5bb8f5}
 
 /* the stage holds the mark for the whole page. it pins at the top and dims as the page scrolls over it */
-.markstage{position:sticky;top:0;width:1440px;height:900px;overflow:hidden;background:linear-gradient(180deg,#0a0b16 0%,#08080b 60%);z-index:0;animation:stageFade linear both;animation-timeline:scroll(root);animation-range:0 900px}
+.markstage{position:sticky;top:0;pointer-events:none;width:1440px;height:900px;overflow:hidden;background:linear-gradient(180deg,#0a0b16 0%,#08080b 60%);z-index:0;animation:stageFade linear both;animation-timeline:scroll(root);animation-range:0 900px}
 @keyframes stageFade{0%{opacity:1;filter:saturate(1)}60%{opacity:.35;filter:saturate(.5)}100%{opacity:.14;filter:saturate(.15)}}
 /* the mark, large, cropped hard by the frame. exact pixels, native 3120:3028 proportion. it does not move */
 .markwrap{position:absolute;left:100px;top:-150px;width:1240px;height:1203px}
